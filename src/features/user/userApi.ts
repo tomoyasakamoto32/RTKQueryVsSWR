@@ -17,7 +17,7 @@ export const userApi = createApi({
 // use + endpointsで設定した名前 + QueryでHooksが作られる
 export const { useGetUsersQuery } = userApi;
 
-// SWRで書いたデータフェッチのサンプル 25行目まで
+// SWRで書いたデータフェッチのサンプル 23行目まで
 const fetcher = (url: string) => fetch(url).then((r) => r.json());
 export const useUsers = () =>
   useSWR<Users>("https://jsonplaceholder.typicode.com/users", fetcher);
